@@ -9,6 +9,8 @@ namespace csharp_typesystem_snacks
     {
         static void Main(string[] args)
         {
+
+         
             //Snack 1
             //L’utente inserisce due numeri in successione.
             //Il software stampa il maggiore.
@@ -136,8 +138,50 @@ namespace csharp_typesystem_snacks
             //Crea un array vuoto.
             //Chiedi per 6 volte all’utente di inserire un numero, se è dispari inseriscilo nell’array.
 
+            Console.WriteLine("Snack 7");
+
+            int[] arrayVuotoDispari = new int[6];
+            int numeroInserito;
+
+            for (int i = 0; i < 6; i++)
+            {
+                Console.WriteLine($"Inserisci il {i + 1}' numero");
+                numeroInserito = Convert.ToInt32(Console.ReadLine());
+
+                if (numeroInserito % 2 == 1)
+                {
+                    arrayVuotoDispari[i] = numeroInserito;
+                }
+
+            }
+
+            Console.WriteLine($"I tuoi numeri dispari sono: ");
+            foreach (int numeri in arrayVuotoDispari)
+            {
+                if (numeri != 0)
+                {
+                    Console.WriteLine(numeri);
+                }
+            }
+
             //Snack 8
             //Crea un array di numeri interi e fai la somma di tutti gli elementi che sono in posizione dispari.
+
+            int[] arrayNumeri = { 1, 4, 5, 6, 7, 8, 9, 6, 4 };
+            int sum = 0;
+
+            Console.WriteLine("I tuoi numeri sono questi, adesso sommeremo quelli che sono in posizione dispari :");
+            for (int i = 0; i < arrayNumeri.Length; i++)
+            {
+                Console.WriteLine(arrayNumeri[i]);
+            }
+            for (int i = 0; i < arrayNumeri.Length; i += 2)
+            {
+                sum += arrayNumeri[i];
+            }
+
+            Console.WriteLine($"La somma degli elementi in posizione dispari è: {sum}");
+
 
             //Snack 9
             //Crea un array vuoto e chiedi all’utente un numero da inserire nell’array.
