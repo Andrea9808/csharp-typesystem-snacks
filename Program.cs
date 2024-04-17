@@ -9,7 +9,8 @@ namespace csharp_typesystem_snacks
     {
         static void Main(string[] args)
         {
-            
+
+
             //Snack 1
             //L’utente inserisce due numeri in successione.
             //Il software stampa il maggiore.
@@ -82,8 +83,26 @@ namespace csharp_typesystem_snacks
 
             Console.WriteLine($"La somma è {somma}");
 
+
+
             //Snack 4
             //Calcola la somma e la media dei numeri da 2 a 10.
+            Console.WriteLine("Snack 4");
+
+            int sommaMedia = 0;
+
+            for (int i = 2; i <= 10; i++)
+            {
+                sommaMedia += i;
+            }
+
+            //media
+            int media = sommaMedia / 9;
+
+
+            Console.WriteLine($"La somma è {sommaMedia}");
+            Console.WriteLine($"La media è {media}");
+
 
             //Snack 5
             //Il software chiede all’utente di inserire un numero.
