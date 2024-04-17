@@ -9,8 +9,7 @@ namespace csharp_typesystem_snacks
     {
         static void Main(string[] args)
         {
-
-         
+            
             //Snack 1
             //L’utente inserisce due numeri in successione.
             //Il software stampa il maggiore.
@@ -167,6 +166,8 @@ namespace csharp_typesystem_snacks
             //Snack 8
             //Crea un array di numeri interi e fai la somma di tutti gli elementi che sono in posizione dispari.
 
+            Console.WriteLine("Snack 8");
+
             int[] arrayNumeri = { 1, 4, 5, 6, 7, 8, 9, 6, 4 };
             int sum = 0;
 
@@ -187,6 +188,34 @@ namespace csharp_typesystem_snacks
             //Crea un array vuoto e chiedi all’utente un numero da inserire nell’array.
             //Continua a chiedere i numeri all’utente e a inserirli nell’array,
             //fino a quando la somma degli elementi è minore di 50.
+
+            Console.WriteLine("Snack 9");
+
+            int[] arrayEmpty = new int[10];
+            int insertNumber;
+            int somm = 0;
+
+            for (int i = 0; i < arrayEmpty.Length; i++)
+            {
+                Console.WriteLine($"Inserisci il {i + 1}' numero fin quando non arrivi a 50");
+                insertNumber = Convert.ToInt32(Console.ReadLine());
+
+                arrayEmpty[i] = insertNumber;
+                somm += insertNumber;
+
+                if (somm >= 50)
+                {
+
+                    Console.WriteLine("La somma è maggiore o uguale di 50");
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("La somma è minore di 50");
+                }
+
+            }
+
 
             //Snack 10
             //Fai inserire un numero, che chiameremo N, all’utente.
