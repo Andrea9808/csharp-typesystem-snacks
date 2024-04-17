@@ -10,7 +10,6 @@ namespace csharp_typesystem_snacks
         static void Main(string[] args)
         {
 
-
             //Snack 1
             //L’utente inserisce due numeri in successione.
             //Il software stampa il maggiore.
@@ -240,6 +239,29 @@ namespace csharp_typesystem_snacks
             //Fai inserire un numero, che chiameremo N, all’utente.
             //Genera N array, ognuno formato da 10 numeri casuali tra 1 e 100.
             //Ogni volta che ne crei uno, stampalo a schermo.
+
+            Console.WriteLine("Inserisci un numero N:");
+            int N = Convert.ToInt32(Console.ReadLine());
+
+            Random rnd = new Random();
+
+            for (int i = 1; i <= N; i++)
+            {
+                int[] array = new int[10];
+
+                for (int k = 0; k < array.Length; k++)
+                {
+                    array[k] = rnd.Next(1, 101);
+                }
+
+                Console.WriteLine($"Ecco l'array {i}:");
+                foreach (int num in array)
+                {
+                    Console.WriteLine($"{num}.");
+                }
+
+            }
+
         }
     }
 }
