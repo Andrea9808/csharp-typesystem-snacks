@@ -107,18 +107,18 @@ namespace csharp_typesystem_snacks
             //Il software chiede all’utente di inserire un numero.
             //Se il numero inserito è pari, stampa il numero, se è dispari, stampa il numero successivo.
             Console.WriteLine("Snack 5");
-            int numeroPariDisapari;
+            int numeroPariDispari;
 
             Console.WriteLine("Inserisci un numero e ti dirò se è pari o dispari");
-            numeroPariDisapari = Convert.ToInt32(Console.ReadLine());
+            numeroPariDispari = Convert.ToInt32(Console.ReadLine());
 
-            if(numeroPariDisapari % 2  == 0)
+            if (numeroPariDispari % 2 == 0)
             {
-                Console.WriteLine($"Il numero {numeroPariDisapari} che hai inserito è PARI");
+                Console.WriteLine($"Il numero {numeroPariDispari} che hai inserito è PARI");
             }
             else
             {
-                Console.WriteLine($"Il numero {numeroPariDisapari} che hai inserito è DISPARI");
+                Console.WriteLine($"Il numero {numeroPariDispari} che hai inserito è DISPARI. Il numero successivo è: {numeroPariDispari + 1}");
             }
 
             //Snack 6
